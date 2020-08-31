@@ -1,3 +1,5 @@
+//
+// 스택을 사용한 풀이
 export function solution(stones: number[], k: number): number {
     //
     // 양 옆에 Infinity를 둔다.
