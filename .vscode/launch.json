@@ -13,7 +13,7 @@
             "skipFiles": ["<node_internals>/**", "node_modules/**"]
         },
         {
-            "name": "mocha",
+            "name": "test (WSL)",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/playground/node_modules/mocha/bin/_mocha",
@@ -22,7 +22,19 @@
             "args": ["./**/*.spec.ts"],
             "cwd": "${workspaceRoot}/playground",
             "internalConsoleOptions": "openOnSessionStart",
-            "skipFiles": ["<node_internals>/**", "node_modules/**"]
+            "skipFiles": ["<node_internals>/**", "node_modules/**"],
+        },
+        {
+            "name": "test (WIN)",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/playground/node_modules/mocha/bin/_mocha",
+            "runtimeExecutable": "node",
+            "runtimeArgs": ["--nolazy", "-r", "ts-node/register/transpile-only"],
+            "args": ["./**/*.spec.ts"],
+            "cwd": "${workspaceRoot}/playground",
+            "internalConsoleOptions": "openOnSessionStart",
+            "skipFiles": ["<node_internals>/**", "node_modules/**"],
         }
     ]
 }
